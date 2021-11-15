@@ -1,4 +1,4 @@
-package teoria;
+package U3_strings_arrays_funciones.teoria;
 
 import java.util.Locale;
 
