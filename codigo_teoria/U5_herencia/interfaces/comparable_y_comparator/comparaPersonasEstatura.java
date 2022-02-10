@@ -1,4 +1,4 @@
-package U5_herencia_interfaces.teoria.interfaces.comparable;
+package U5_herencia_interfaces.teoria.interfaces.comparable_y_comparator;
 
 import java.util.Comparator;
 
