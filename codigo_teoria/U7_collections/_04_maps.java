@@ -12,6 +12,7 @@ public class _04_maps {
     m.put("Marta", 1.60);
     m.put("Luis", 1.73);
     m.put("Pedro", 1.69);
+    System.out.print("Mapa original: ");
     System.out.println(m); // Los Maps implementan el toString()
 
     // Si queremos cambiar el valor de una clave, lo "insertamos" de nuevo
@@ -28,7 +29,7 @@ public class _04_maps {
 
     // Para saber si una clave está almacenada en un mapa
     boolean tiene_pedro = m.containsKey("Pedro");
-    System.out.println(tiene_pedro);
+    System.out.println("¿Contiene la clave 'Pedro'?: " + tiene_pedro);
 
     // Para saber si hay alguna entrada con un valor determinada
     m.containsValue(1.71);
@@ -50,6 +51,7 @@ public class _04_maps {
     // Devuelve una vista conjunto de las entradas, objetos de tipo Map.Entry, de las que se obtiene
     // la clave con getKey o el valor con getValue
     Set<Map.Entry<String, Double>> e1 = m.entrySet();
+    System.out.print("Conjunto de entradas: ");
     System.out.println(e1);
     for (Map.Entry<String, Double> entrada : e1) {
       entrada.getKey();
@@ -71,12 +73,13 @@ public class _04_maps {
 
     // Eliminar una clave concreta
     claves.remove("Marta");
+    System.out.print("Quitamos la clave 'Marta': ");
     System.out.println(m);
 
     // La única forma segura de eliminar entradas durante una iteración sobre cualquiera de las
-    // vistas
-    // es con método remove de Iterator
+    // vistas es con método remove de Iterator
     Set<Map.Entry<String, Double>> e2 = m.entrySet();
+    System.out.print("Conjunto de partida: ");
     System.out.println(e2);
     Iterator<Map.Entry<String, Double>> it = e2.iterator();
     while (it.hasNext()) {
@@ -86,6 +89,7 @@ public class _04_maps {
       }
     }
 
+    System.out.print("Conjunto resultado: ");
     System.out.println(m);
 
     // Y en vez de iterar sobre las claves, también se podría iterar sobre los valores
@@ -98,6 +102,7 @@ public class _04_maps {
       }
     }
 
+    System.out.print("Conjunto final: ");
     System.out.println(m);
 
     // En cualquier caso, para añadir entradas, no se puede en la vista de la colección ni en el
